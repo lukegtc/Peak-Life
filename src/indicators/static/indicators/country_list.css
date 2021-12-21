@@ -1,0 +1,38 @@
+
+	html,
+	body {
+		margin:0;
+		padding:0;
+		height:100%;
+	}
+	#container {
+		min-height:100%;
+		position:relative;
+	}
+
+	#body {
+        position: relative;
+		padding:10px;
+		padding-bottom:60px;	/* Height of the footer */
+	}
+	.button_me{
+        background-color: cornflowerblue;
+		border-color: cornflowerblue;
+    }
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.column {
+  float: right;
+  width: 45%;
+  padding: 15px;
+}
+
+	img {
+  		height: 315px;
+        align-content: center;
+        border-color: transparent;
+	}

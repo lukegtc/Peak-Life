@@ -1,0 +1,45 @@
+<!--This is the page with the dropdown list -->
+
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+    <div><br>
+
+    <form action = "{% url "countries" %}" method="post">
+    {% csrf_token %}
+        <h1><label class="mr-sm-2" for="country">Choose country</label></h1>
+<div class="mb-5">
+<select class="form-control form-control-lg" name="country" id="country">
+    {% for country in country_list %}
+        <option value = "{{ country.label }}">{{ country.name }}</option>
+    {% endfor %}
+</select>
+{#The gender dropdown#}
+</div>
+
+    <div class="row">
+        <div class="column">
+            <h1><label class="mr-sm-2" for="gender">Insert your Gender</label></h1>
+
+            <select class="form-control form-control-lg" name="gender" id="gender">
+                <option value="">I do not want to enter</option>
+                <option value = "male">Male</option>
+                <option value = "female">Female</option>
+            </select>
+            <br>
+            <br>
+            <h1><label class="mr-sm-2" for="gender">Insert your Age</label></h1>
+                <input type="number" min="1" class="form-control form-control-lg form-group mr-ms-2" name="age" id="age" placeholder="Age" />
+
+
+        </div>
+        <div class="column">
+            <img src="{% static "indicators/images/wordmap.png" %}" alt="My image">
+        </div>
+    </div>
+        <br>
+        <br>
+         <button type="submit" class="btn btn-primary btn-lg btn-block button_me ">Get your country score!</button>
+</form>
+
+{% endblock %}

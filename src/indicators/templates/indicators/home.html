@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block content %}
+    <br>
+    <br>
+<div class="card">
+  <h5 class="card-header">About</h5>
+  <div class="card-body">
+    <h5 class="card-title">Who are we?</h5>
+    <p class="card-text">PeakLife is an innovative service aimed at comparing and discovering in detail the quality of
+        life in every country on the planet. It generates data based on the general country data provided by the world
+        health organisation.
+
+
+</p>
+
+  </div>
+
+</div>
+    <br>
+    <br>
+<div class="card">
+  <h5 class="card-header">How it works</h5>
+  <div class="card-body">
+    <h5 class="card-title">What do the results mean?</h5>
+    <p class="card-text">Our algorithm takes into account an extensive collection of factors affecting health and
+        quality of life, in order to give you a complete overview for every country. You can also use PeakLife to find
+        out which country has the best quality of life specifically for you!
+        <br>
+        <br>
+        The general country score is the weighted score of that particular country against all the other countries in
+        the world. This score indicates the overal grade the quality of life gets in your specific country.
+        <br>
+        <br>
+        The user tailored score is the weighted score of your particular gender and age group inside that country.
+        <br>
+        <br>
+        The total country score is the user tailored score and the general country score weighted, so this is your
+        totally personalized score.
+</p>
+    <a href="{% url "countries" %}" class="btn btn-primary">Do the test!</a>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,24 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+pytest = "*"
+pylint = "*"
+coverage = "*"
+pytest-cov = "*"
+pre-commit = "*"
+
+[packages]
+django = "~=2.2"
+requests = "*"
+django-heroku = "*"
+gunicorn = "*"
+dj-database-url = "*"
+django-heroku-db-utils = "==0.1.0"
+django-mathfilters = "*"
+tqdm = "*"
+
+[requires]
+python_version = "3.7"
